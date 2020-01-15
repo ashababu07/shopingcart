@@ -1,0 +1,47 @@
+<!-- <p>productproject works!</p> -->
+<div>
+    <div class="jumbotron text-center">
+<h1 style="color: red">SUPER-MARKET</h1>
+
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div style="background-color: lightgreen;text-align: center;">
+            <a class="navbar-brand" href="#">HOME</a>
+           <a class="navbar-brand" href="#">
+                PRODUCT-LIST</a>
+           <a class="navbar-brand" href="#">LOGIN</a>
+        </div>
+        </div>
+
+          <!-- <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Product-List</a></li>
+           
+          </ul> -->
+        </div>
+    </nav>
+</div>
+
+
+<div id="bcolor">
+<div class="container">
+    <div class="row">
+      
+<ul *ngFor="let i of productlist">
+        <div class="col-sm-4">
+    <li>
+<div>{{i.pid}}</div>{{i.pname}}<div>{{i.price}}</div>
+<div><img src="{{i.images}}" alt="" width="50" height="50"></div><div>{{i.description}}</div>
+    </li>
+    <button (click)="addtocart(i)" class="btn btn-info">AddToCart</button>
+</div>
+</ul>
+
+</div></div>
+</div>
+
+
+</div>

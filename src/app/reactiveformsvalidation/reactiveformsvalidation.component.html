@@ -1,0 +1,44 @@
+<form action="" class="form-group" [formGroup]='profile'>
+    <div>
+<label for="">Name</label>
+    <input class="form-control" type="text" formControlName='name' required>
+   </div>
+   
+   <div>
+       <label for="">Email</label>
+       <input class="form-control" type="text" formControlName='email'>
+   </div>
+   <div>
+       <label for="">Password</label>
+       <input class="form-control" type="text" formControlName='password'>
+   </div>
+   <!-- <div> -->
+
+    <!-- disabled validation -->
+       <!-- <input type="submit" [disabled]='!profile.valid' name="" id="" value="save"> -->
+       
+   <!-- </div> -->
+   <!-- <div *ngIf='profile.status==valid'>
+       <div class=""></div>
+        <input type="submit" name="" id="" value="save">
+   </div>
+   <div *ngIf='profile.status!=valid'>
+        <input type="submit" [disabled]='!profile.valid' name="" id="" value="save">
+   </div>  -->
+
+
+   <!-- OR -->
+
+   <div *ngIf='profile.status!=valid' class="alert alert-danger">
+   please fill out the fielsds</div>
+   <div>
+   {{profile.status}}
+   {{profile.dirty}}
+   {{profile.touched}} 
+ </div>
+
+
+<!-- <p>
+    Form Status: {{ profile.status }}
+</p> -->
+</form>

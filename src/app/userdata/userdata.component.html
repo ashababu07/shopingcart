@@ -1,0 +1,32 @@
+<form action="" class="form-group">
+    <div>
+        <label for=""></label>
+        <input type="text" name="username" [(ngModel)]="model.username" #uname="ngModel"
+        maxlength="5" minlength="3" required>
+        {{uname.dirty}}
+        {{uname.touched}}
+        <!-- {{uname.className}} -->
+<!-- #uname -->
+        <!-- '!uname.dirty&&!uname.touched' -->
+       <div *ngIf='!uname.dirty||!uname.touched'
+       class="alert alert-danger">plz fill out the names
+
+       </div>
+    </div>
+
+    <div>
+        <label for=""></label>
+        <input class="form-control" type="text" name="password" [(ngModel)]="model.password"
+        #upass>
+        {{upass.className}}
+    </div>
+    <div>
+        <label for=""></label>
+        <input type="text" name="usertype" [(ngModel)]="model.usertype" #utype="ngModel">
+
+        <div *ngIf='!utype.dirty && !utype.touched'></div>
+    </div>
+    <div>
+        <input type="submit" value="submit">
+    </div>
+</form>

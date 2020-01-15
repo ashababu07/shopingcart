@@ -1,0 +1,59 @@
+
+<!-- <div>adsgashsvdhgdhgh</div> -->
+<!-- <div *ngFor="let i of data">
+    <div>
+        productid:={{i.pid}}
+    </div>
+    <div>
+        product name:={{i.pname}}
+    </div>
+    <div>
+        product price:={{i.price}}
+    </div>
+    <div>
+        product description:={{i.productdescription}}
+    </div>
+    <div>
+        <button (click)="deletecart(i)">delete</button>
+    </div>
+</div> -->
+
+
+
+  <h1 style="color:pink">PRODUCT-LIST</h1>
+  <table border="1">
+    <tr>
+        
+        <th style="color:darkgreen">PId</th>
+        <th style="color:darkgreen">Product Name</th>
+        <th style="color:darkgreen">Image</th>
+        <th style="color:darkgreen">Price</th>
+        <th style="color:darkgreen">Product Description</th>
+        <th style="color:darkgreen">Quantity</th>
+        <th></th>
+        
+
+
+    </tr>
+   
+    <tr *ngFor="let i of data">
+        
+    <td>{{i.pid}}</td>
+    <td>{{i.pname}}</td>
+    <td><img src="{{i.images}}" alt="" width="50" height="50"></td>
+    <td>{{i.price}}</td>
+    
+    <td>{{i.productdescription}}</td>
+    <td><button (click)="incre(i)">+</button>{{i.quantity}}
+        <button (click)="decre(i)">-</button></td>
+        <td><button (click)="deletecart(i)">Delete</button></td>
+    </tr>
+
+    </table>
+
+    <button (click)="proceedtopay()" class="btn btn-info">proceedtopay</button>
+
+<div style="color:chartreuse"><h1>sum of price={{sumofprice}}</h1></div>
+<!-- <div style="border: slateblue"></div> -->
+  
+

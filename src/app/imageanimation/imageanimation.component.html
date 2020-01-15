@@ -1,0 +1,23 @@
+<!-- <p>imageanimation works!</p> -->
+
+
+<!-- <button (click)="toggle()">moveimage</button> -->
+<!-- <div [@moveimage]='statex'></div> -->
+<div [@moveimage]='state'>
+    <img src="assets/images/download.jpeg" style='margin-left:50px ; '
+    width="200px" height="200px">
+    state{{islowerupper?'lower':'upper'}}
+
+    <button (click)="toggle()">translate</button>
+<button (click)="change()">rotate</button>
+<button (click)="scale()">scale</button>
+</div>
+
+
+
+
+<!-- <button (click)="toggle()">moveimage</button>
+<div [@moveimage]="islowerupper?'lower':'upper'">
+    <img src="assets/images/download.jpeg" width="200px" height="200px">
+    state{{islowerupper?'lower':'upper'}}
+</div> -->

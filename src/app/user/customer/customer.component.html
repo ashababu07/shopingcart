@@ -1,0 +1,42 @@
+<!-- <p>customer works!</p> -->
+<div>
+    <div class="row">
+    <div class="col-sm-6">
+        <!-- <div [hidden]="submitted"> -->
+<form action="" class="form-group" (ngSubmit)="save()">
+    <div>
+        <label for="">User name:</label>
+        <input type="text" [(ngModel)]="model.username" name="username">
+
+<!-- 
+        <div [hidden]="username.valid || username.pristine" 
+        class="alert alert-danger">Name is required</div> -->
+    </div>
+    <div>
+        <label for="">Password:</label>
+        <input type="text" [(ngModel)]="model.password" name="password" class="form-control">
+    </div>
+    <div>
+        <label for="">Email:</label>
+        <input type="text" [(ngModel)]="model.email"name="email" class="form-control">
+    </div>
+    <div>
+        <label for="">Date of Birth:</label>
+        <input type="text" [(ngModel)]="model.dob"name="dob" class="form-control">
+    </div>
+    <input type="submit" value="save">
+
+    <div class="col-sm-6"></div>
+
+</form>
+<!-- </div> -->
+</div>
+</div>
+</div>
+
+<ul *ngFor="let i of customerlist">
+    <li>
+            {{i.username}},{{i.password}},{{i.email}}
+    </li>
+    
+</ul>

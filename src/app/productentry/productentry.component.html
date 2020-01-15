@@ -1,0 +1,24 @@
+<!-- <p>productentry works!</p> -->
+ 
+
+
+ProductID:<input type="text" (input)="productid=$event.target.value">
+{{productid}}
+<br>
+Product Name:<input type="text" (input)="productname=$event.target.value">
+<br>
+Product Price:<input type="text" (input)="productprice=$event.target.value">
+<br>
+Product Description:<input type="text" (input)="productdescription=$event.target.value">
+
+
+<button (click)="save()">save</button>
+<button (click)="view()">view</button>
+<ul *ngFor="let i of productlist">
+    <li>{{i.ProductId}},
+        {{i.ProductName}},
+        {{i.ProductPrice}},
+        {{i.ProductDescription}}
+    </li>
+
+</ul>

@@ -1,0 +1,26 @@
+[
+    {
+        "pid":"tp1001",
+        "pname":"pen",
+        "images":"assets/images/pen.jpeg",
+        "price":"20",
+        "productdescription":"for writing",
+        "quantity":1
+    },
+    {
+        "pid":"tp1002",
+        "pname":"book",
+        "images":"assets/images/book.jpeg",
+        "price":"20",
+        "productdescription":"for teaching",
+        "quantity":1
+    },
+    {
+        "pid":"tp1003",
+        "pname":"eraser",
+        "images":"assets/images/eraser.jpeg",
+        "price":"10",
+        "productdescription":"for erasing",
+        "quantity":1
+    }
+]

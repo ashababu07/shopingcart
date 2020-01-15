@@ -1,0 +1,48 @@
+<form action="" class="form-group" [formGroup]='adminform' (ngSubmit)="save1a()">
+    
+    <div>
+NAME:<input type="text" class="form-control" formControlName='name'>
+</div>
+<div>
+    EMAIL:
+    <input type="text" class="form-control" formControlName="email">
+</div>
+<div>
+    PHONE NO:
+    <input type="text" class="form-control" formControlName="phoneno">
+</div>
+
+<div formGroupName="admindata">
+        ADDRESS:
+<div>
+    HOUSE NO:
+<input type="text" class="form-control" formControlName="houseno">
+</div>
+<div>
+HOUSE NAME:
+<input type="text" class="form-control" formControlName="housename">
+</div>
+<div>
+    AREA: <input type="text" class="form-control" formControlName="area">
+</div>
+
+</div>
+
+<div>
+USERNAME:
+<input type="text"></div>
+<div>
+    PASSWORD:
+    <input type="text">
+</div>
+ 
+
+<input type="submit" value="save">
+</form>
+<div *ngIf='adminform.status!=valid' class="alert alert-danger">
+    please fill out the fielsds</div>
+    <div>
+    {{adminform.status}}
+    <!-- {{profile.dirty}}
+    {{profile.touched}}  -->
+  </div>
